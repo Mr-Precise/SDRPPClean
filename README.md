@@ -1,12 +1,43 @@
 # SDR++ Clean bloat-free SDR software
 
-* This is a really clean **Fork** of SDR++
+#### This is a really clean **Fork** of SDR++
+* **Bugs from this fork should be reported** [**here**](https://github.com/Mr-Precise/SDRPPClean/issues), not to the original author.
+* Upstream url: [Mr-Precise/SDRPlusPlus](https://github.com/Mr-Precise/SDRPlusPlus)  
+* SDR++ original author: [**AlexandreRouma/SDRPlusPlus**](https://github.com/AlexandreRouma/SDRPlusPlus)
+* 
 * MinGW compatible / build without garbage from Microsoft
 * CMake only
-* **Bugs from this fork should be reported** [**here**](https://github.com/Mr-Precise/SDRPlusPlus/issues), not to the original author.
-* Original author [**AlexandreRouma/SDRPlusPlus**](https://github.com/AlexandreRouma/SDRPlusPlus) 
+* Improved CMake install logic and more readable code
+* Possible backward incompatibility (different paths/names)
+* Implemented linux portable build
 
 SDR++ is a cross-platform and open source SDR software with the aim of being bloat free and simple to use.
+
+### Dependencies
+soon  
+build-essential pkg-config git cmake make fftw3  
+dev packages libvolk libzstd libhackrf rtl-sdr etc...
+
+### Configure
+soon  
+cmake will accept some options, e.g.
+* `-DUSE_LINUX_PORTABLE=ON`, Linux portable build
+* `-DCMAKE_INSTALL_PREFIX=/usr` default install prefix on ubuntu/debian.  
+`cmake -L ..` or see [CMakeLists.txt](https://github.com/Mr-Precise/SDRPPClean/blob/main/CMakeLists.txt)
+
+### Build & Install
+soon
+
+```sh
+git clone --recursive https://github.com/Mr-Precise/SDRPPClean
+cd SDRPPClean && mkdir build && cd build
+cmake -G "Unix Makefiles" ..
+cmake --build . --config Release
+```
+MinGW toolchain
+```sh
+cmake -G "Unix Makefiles" .. -DCMAKE_TOOLCHAIN_FILE=Your-CrossCompiling-Toolchain-file.cmake
+```
 
 ## Used libraries & projects
 * [SoapySDR (PothosWare)](https://github.com/pothosware/SoapySDR)

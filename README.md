@@ -3,7 +3,7 @@
 #### This is a really clean **Fork** of SDR++
 * **Bugs from this fork should be reported** [**here**](https://github.com/Mr-Precise/SDRPPClean/issues), not to the original author.
 * Upstream url: [Mr-Precise/SDRPlusPlus](https://github.com/Mr-Precise/SDRPlusPlus)  
-* SDR++ original author: [**AlexandreRouma/SDRPlusPlus**](https://github.com/AlexandreRouma/SDRPlusPlus)
+* SDR++ original author: [**AlexandreRouma/SDRPlusPlus**](https://github.com/AlexandreRouma/SDRPlusPlus)  
 * 
 * MinGW compatible / build without garbage from Microsoft
 * CMake only
@@ -15,8 +15,8 @@ SDR++ is a cross-platform and open source SDR software with the aim of being blo
 
 ### Dependencies
 soon  
-build-essential pkg-config git cmake make fftw3  
-dev packages libvolk libzstd libhackrf rtl-sdr etc...
+Install dev packages:  
+build-essential pkg-config git cmake make fftw3 libvolk libzstd libhackrf rtl-sdr etc...
 
 ### Configure
 soon  
@@ -34,7 +34,8 @@ cd SDRPPClean && mkdir build && cd build
 cmake -G "Unix Makefiles" ..
 cmake --build . --config Release
 ```
-MinGW toolchain
+MinGW toolchain:  
+Recommended MinGW/gcc based shared toolchain like [MXE (M cross environment)](https://github.com/mxe/mxe)   
 ```sh
 cmake -G "Unix Makefiles" .. -DCMAKE_TOOLCHAIN_FILE=Your-CrossCompiling-Toolchain-file.cmake
 ```
@@ -56,3 +57,6 @@ cmake -G "Unix Makefiles" .. -DCMAKE_TOOLCHAIN_FILE=Your-CrossCompiling-Toolchai
 * [libmirisdr-5 (ericek111)](https://github.com/ericek111/libmirisdr-5)
 * [bladeRF](https://github.com/Nuand/bladeRF)
 * [libad9361-iio](https://github.com/analogdevicesinc/libad9361-iio)
+* [libperseus-sdr](https://github.com/AlexandreRouma/libperseus-sdr)
+* [RFNM](https://github.com/AlexandreRouma/librfnm)
+* [libfobos](https://github.com/AlexandreRouma/libfobos)
